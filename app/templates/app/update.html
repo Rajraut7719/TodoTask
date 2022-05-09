@@ -1,0 +1,12 @@
+{% extends 'partials/base.html' %}
+{% block title %} TODO APP{% endblock title %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="border p-3">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form |crispy}}
+        <input type="submit"class="btn btn-info mt-3 form-control"value="Update">
+    </form>
+</div>
+{% endblock content %}
